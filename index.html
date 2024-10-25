@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>即時語音識別</title>
+    <style>
+        /* 設置頁面內所有文字的默認字體大小 */
+        body {
+            font-size: 20px; /* 默認字體大小 */
+        }
+
+        /* 設置標題的字體大小 */
+        h1 {
+            font-size: 40px; /* 標題的字體大小 */
+        }
+
+        /* 設置按鈕的字體大小 */
+        button {
+            font-size: 24px; /* 按鈕的字體大小 */
+        }
+
+        /* 設置顯示文本的字體大小 */
+        #originalText, #recognizedText, #recognitionTime, #translationTime, #responseTime {
+            font-size: 30px; /* 調整這些元素的字體大小 */
+        }
+    </style>
+</head>
+<body>
+    <h1>即時語音識別</h1>
+    <button id="startButton" onclick="startRecognition()">開始識別</button>
+    <button id="stopButton" onclick="stopRecognition()">停止識別</button>
+    <div id="originalText"></div> <!-- 新增的元素，用於顯示原始識別文本 -->
+    <div id="recognizedText"></div> <!-- 已存在的元素，用於顯示翻譯後的文本 -->
+    <div id="recognitionTime"></div> <!-- 顯示識別時間 -->
+    <div id="translationTime"></div> <!-- 顯示翻譯時間 -->
+    <div id="responseTime"></div> <!-- 顯示總延遲時間 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
